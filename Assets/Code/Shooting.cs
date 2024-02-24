@@ -7,12 +7,20 @@ public class Shooting : MonoBehaviour
     public Transform firePoint;
 
     public GameObject flashlight;
-    private bool flashOn = false;
+    private bool flashOn = true;
+    public GameObject UVflashlight;
+    private bool UVflashOn = false;
     public GameObject bulletPrefab;
 
     public float force = 20f;
 
     // Update is called once per frame
+
+    void Start() {
+        flashlight.gameObject.SetActive(true);
+        UVflashlight.gameObject.SetActive(false);
+    }
+
     void Update()
     {
 
@@ -22,9 +30,11 @@ public class Shooting : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F)) {
             if (!flashOn) {
                 flashlight.gameObject.SetActive(true);
+                UVflashlight.gameObject.SetActive(false);
                 flashOn = true;
             } else {
                 flashlight.gameObject.SetActive(false);
+                UVflashlight.gameObject.SetActive(true);
                 flashOn = false;
             }
         }
