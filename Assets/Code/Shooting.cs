@@ -5,6 +5,9 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     public Transform firePoint;
+
+    public GameObject flashlight;
+    private bool flashOn = false;
     public GameObject bulletPrefab;
 
     public float force = 20f;
@@ -13,8 +16,17 @@ public class Shooting : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetButtonDown("Fire1")) {
+        if (Input.GetButtonDown("Fire1")) {
             Shoot();
+        }
+        if (Input.GetKeyDown(KeyCode.F)) {
+            if (!flashOn) {
+                flashlight.gameObject.SetActive(true);
+                flashOn = true;
+            } else {
+                flashlight.gameObject.SetActive(false);
+                flashOn = false;
+            }
         }
         
     }

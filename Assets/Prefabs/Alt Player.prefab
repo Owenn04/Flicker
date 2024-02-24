@@ -189,6 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 7875811201581810523}
+  flashlight: {fileID: 4510754871667109742}
   bulletPrefab: {fileID: 6476612477615015842, guid: 716e4002229b360418d28cb13c331049, type: 3}
   force: 20
 --- !u!1 &4510754871667109742
@@ -238,7 +239,7 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 1
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
+  m_FalloffIntensity: 0.518
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.4
   m_LightVolumeIntensity: 1
@@ -257,8 +258,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 10.7995, y: 0.57819986, z: 0}
-    m_Extent: {x: 12.1372, y: 10.653999, z: 0}
+    m_Center: {x: 11.39235, y: 0.57935, z: 0}
+    m_Extent: {x: 13.54485, y: 12.65435, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -266,7 +267,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 4
+  m_ShapeLightFalloffSize: 6
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.28389958, y: 0.0050285556, z: 7.5151263e-10}
