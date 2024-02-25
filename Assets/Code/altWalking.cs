@@ -39,7 +39,7 @@ public class altWalking : MonoBehaviour
 
         moveInput.Normalize();
 
-        playerRigidBody.velocity = moveInput * 10;  
+        playerRigidBody.velocity = moveInput * 4;  
 
         Vector2 lookDir = mousePos - playerRigidBody.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
