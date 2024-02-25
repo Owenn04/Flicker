@@ -22401,49 +22401,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alt Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2257026117941292276, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3163616966884677907, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
-      propertyPath: m_ShadowIntensity
-      value: 0.152
-      objectReference: {fileID: 0}
-    - target: {fileID: 3163616966884677907, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
+    - target: {fileID: 3142369024181474710, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
       propertyPath: m_PointLightOuterRadius
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3163616966884677907, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
-      propertyPath: m_ShadowIntensityEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3986752154570852616, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
-      propertyPath: m_Size.x
-      value: 4.0539036
-      objectReference: {fileID: 0}
-    - target: {fileID: 3986752154570852616, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
-      propertyPath: m_Size.y
-      value: 2.2617502
-      objectReference: {fileID: 0}
-    - target: {fileID: 3986752154570852616, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.011739016
-      objectReference: {fileID: 0}
-    - target: {fileID: 4510754871667109742, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4594230652314186287, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5580555357661862023, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 5580555357661862023, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7352832548586182861, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
       propertyPath: ammoText
@@ -22457,10 +22417,6 @@ PrefabInstance:
       propertyPath: UVflashlight_UI
       value: 
       objectReference: {fileID: 1551827189}
-    - target: {fileID: 7688388774311884712, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 9121288698008823085, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
       propertyPath: cam
       value: 
