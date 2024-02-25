@@ -90,9 +90,9 @@ public class Shooting : MonoBehaviour
 
     public IEnumerator slowMove(GameObject moved) {
         extraGun.SetActive(true);
-        for (int i = 0; i < 10; i++) {
-            moved.transform.position += new Vector3(0, (float)0.2,0); 
-            yield return new WaitForSeconds(0.3f);
+        for (int i = 0; i < 40; i++) {
+            moved.transform.position += new Vector3(0, (float)0.05,0); 
+            yield return new WaitForSeconds(0.075f);
         }
     }
 
