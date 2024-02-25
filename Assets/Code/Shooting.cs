@@ -20,6 +20,7 @@ public class Shooting : MonoBehaviour
     RaycastHit2D lightShine;
     public float flashlightLength = 6; 
     int flashlightMask;
+    public GameObject gun;
 
     // Update is called once per frame
 
@@ -50,6 +51,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetButtonDown("Fire1")) {   
             if (ammoCount > 0) {
                 Shoot();
+                gun.gameObject.GetComponent<AudioSource>().Play();
             }
         }
         if (Input.GetKeyDown(KeyCode.F)) {

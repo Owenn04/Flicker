@@ -2752,6 +2752,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &672346485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4594230652314186287, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
+  m_PrefabInstance: {fileID: 680278121}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &680278121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2768,6 +2773,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7352832548586182861, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 672346485}
     - target: {fileID: 7352832548586182861, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
       propertyPath: ammoText
       value: 
@@ -2859,12 +2868,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -4737056176986670715, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: ec17c40a7077c7e438b05cbebdc40eb0, type: 3}
-    - target: {fileID: -4737056176986670715, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
+      propertyPath: m_Volume
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 2037118111092076102, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
       propertyPath: m_LocalPosition.x
