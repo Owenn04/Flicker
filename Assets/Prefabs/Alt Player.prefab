@@ -177,6 +177,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRigidBody: {fileID: 2646415182609267909}
   cam: {fileID: 0}
+  playerHealth: 3
+  HP_3: {fileID: 0}
+  HP_2: {fileID: 0}
+  HP_1: {fileID: 0}
+  HP_0: {fileID: 0}
 --- !u!114 &7352832548586182861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,9 +196,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 7875811201581810523}
   flashlight: {fileID: 4510754871667109742}
+  flashlight_UI: {fileID: 0}
   UVflashlight: {fileID: 7688388774311884712}
+  UVflashlight_UI: {fileID: 0}
   bulletPrefab: {fileID: 6476612477615015842, guid: 716e4002229b360418d28cb13c331049, type: 3}
   force: 20
+  ammoCount: 13
+  ammoText: {fileID: 0}
 --- !u!1 &4510754871667109742
 GameObject:
   m_ObjectHideFlags: 0
