@@ -183,6 +183,7 @@ MonoBehaviour:
   HP_1: {fileID: 0}
   HP_0: {fileID: 0}
   sprite: {fileID: 3280507199391643234}
+  gameOverMenu: {fileID: 0}
 --- !u!114 &7352832548586182861
 MonoBehaviour:
   m_ObjectHideFlags: 0
