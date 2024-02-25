@@ -13,6 +13,7 @@ public class altWalking : MonoBehaviour
     public GameObject HP_2;
     public GameObject HP_1;
     public GameObject HP_0;
+    public SpriteRenderer sprite;
 
     Vector2 mousePos;
     // Update is called once per frame
@@ -44,6 +45,8 @@ public class altWalking : MonoBehaviour
         if (other.gameObject.tag == "Enemy") {
             playerHealth -= 1;
             other.gameObject.GetComponent<AudioSource>().Play();
+            StartCoroutine(FlashRed());
+
 
             if (playerHealth == 2) {
                 HP_2.gameObject.SetActive(true);
@@ -63,5 +66,11 @@ public class altWalking : MonoBehaviour
             }
 
         }
+    }
+
+    public IEnumerator FlashRed() {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        sprite.color = Color.white;
     }
 }

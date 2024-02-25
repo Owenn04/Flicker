@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -8,6 +9,7 @@ public class EnemyController : MonoBehaviour
     private Transform player; 
     public int enemyHealth = 3;
     private Rigidbody2D rb; 
+    public SpriteRenderer sprite;
 
     void Start()
     {
@@ -40,6 +42,7 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet") {
             enemyHealth -= 1;
+            StartCoroutine(FlashRed());
             if (enemyHealth == 0) {
                 Destroy(gameObject);
             }
@@ -47,5 +50,11 @@ public class EnemyController : MonoBehaviour
         // If the enemy collides with something, try to go around it by turning
         transform.Rotate(Vector3.forward * Random.Range(-90f, 90f)); 
         }
+    }
+
+    public IEnumerator FlashRed() {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        sprite.color = Color.white;
     }
 }

@@ -103,6 +103,7 @@ MonoBehaviour:
   detectionRange: 30
   moveSpeed: 2
   enemyHealth: 3
+  sprite: {fileID: 6446767826364087189}
 --- !u!50 &-6337340931450536047
 Rigidbody2D:
   serializedVersion: 4
