@@ -16,6 +16,7 @@ public class altWalking : MonoBehaviour
     public GameObject HP_0;
     public SpriteRenderer sprite;
     public GameObject gameOverMenu;
+    public Shooting shootingScript;
 
     bool isInvincible = false;
     Vector2 mousePos;
@@ -49,7 +50,11 @@ public class altWalking : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
 
-        
+        if (other.gameObject.tag == "Extra Gun") {
+            shootingScript.ammoCount += 13;
+            shootingScript.ammoText.text = shootingScript.ammoCount.ToString();
+            other.gameObject.SetActive(false);
+        }
 
         if (other.gameObject.tag == "Enemy" && !isInvincible) {
             playerHealth -= 1;
