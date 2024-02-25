@@ -22406,6 +22406,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7352832548586182861, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
+      propertyPath: force
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7352832548586182861, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 1513517544}
