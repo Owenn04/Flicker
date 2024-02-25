@@ -17,6 +17,7 @@ public class altWalking : MonoBehaviour
     public SpriteRenderer sprite;
     public GameObject gameOverMenu;
 
+    bool isInvincible = false;
     Vector2 mousePos;
     // Update is called once per frame
 
@@ -27,6 +28,7 @@ public class altWalking : MonoBehaviour
         HP_1.gameObject.SetActive(false);
         HP_0.gameObject.SetActive(false);
     }
+
     void Update()
     {
         moveInput.x = Input.GetAxisRaw("Horizontal");
@@ -44,12 +46,19 @@ public class altWalking : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.tag == "Enemy") {
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+
+        
+
+        if (other.gameObject.tag == "Enemy" && !isInvincible) {
             playerHealth -= 1;
+
+            StartCoroutine(InvincibilityTimer());
             other.gameObject.GetComponent<AudioSource>().Play();
             StartCoroutine(FlashRed());
 
+                isInvincible = true;
 
             if (playerHealth == 2) {
                 HP_2.gameObject.SetActive(true);
@@ -68,8 +77,16 @@ public class altWalking : MonoBehaviour
                 HP_0.gameObject.SetActive(true);
                 gameOver();
             }
-
+        } else{
+            isInvincible = false;
         }
+        
+    }
+
+    IEnumerator InvincibilityTimer()
+    {
+        yield return new WaitForSeconds(1f);
+        
     }
 
     public IEnumerator FlashRed() {
@@ -83,9 +100,9 @@ public class altWalking : MonoBehaviour
     }
     public void gameOver() {
         gameOverMenu.SetActive(true);
-        Invoke("destroyEnemies", 0.5f);
         AudioSource gunSound = gameObject.transform.Find("FirePoint").GetComponent<AudioSource>(); 
         gunSound.enabled = false;
+        Invoke("destroyEnemies", 0.5f);
 
     }
 
