@@ -6,6 +6,7 @@ public class EnemyController : MonoBehaviour
     public float moveSpeed = 5f; // Speed at which the enemy moves
 
     private Transform player; 
+    public int enemyHealth = 3;
     private Rigidbody2D rb; 
 
     void Start()
@@ -37,7 +38,14 @@ public class EnemyController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Bullet") {
+            enemyHealth -= 1;
+            if (enemyHealth == 0) {
+                Destroy(gameObject);
+            }
+        } else {
         // If the enemy collides with something, try to go around it by turning
         transform.Rotate(Vector3.forward * Random.Range(-90f, 90f)); 
+        }
     }
 }
