@@ -41,8 +41,7 @@ public class altWalking : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.tag == "Enemy")
-        {
+        if (other.gameObject.tag == "Enemy") {
             playerHealth -= 1;
 
             if (playerHealth == 2) {
