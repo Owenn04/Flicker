@@ -2752,11 +2752,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &672346485 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4594230652314186287, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
-  m_PrefabInstance: {fileID: 680278121}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &680278121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2769,26 +2764,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alt Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2257026117941292276, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280507199391643234, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280507199391643234, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280507199391643234, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7352832548586182861, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 672346485}
     - target: {fileID: 7352832548586182861, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
       propertyPath: ammoText
       value: 
@@ -2885,8 +2860,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4737056176986670715, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
       propertyPath: m_Volume
-      value: 0.85
+      value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: -4737056176986670715, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a750f04f6cbfb1b4ea9b4cb4d9d84991, type: 3}
     - target: {fileID: 2037118111092076102, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8
@@ -2927,10 +2906,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5317436191460776234, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-      propertyPath: sprite
-      value: 
-      objectReference: {fileID: 1744829974}
     - target: {fileID: 5702371458570091944, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -22577,11 +22552,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!212 &1744829974 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 6446767826364087189, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-  m_PrefabInstance: {fileID: 764792456}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2115801413
 GameObject:
   m_ObjectHideFlags: 0
