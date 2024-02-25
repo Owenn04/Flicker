@@ -43,6 +43,7 @@ public class altWalking : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == "Enemy") {
             playerHealth -= 1;
+            other.gameObject.GetComponent<AudioSource>().Play();
 
             if (playerHealth == 2) {
                 HP_2.gameObject.SetActive(true);

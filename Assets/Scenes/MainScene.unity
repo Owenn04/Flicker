@@ -209,7 +209,7 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.698
+  m_FalloffIntensity: 0.418
   m_Color: {r: 0.2704254, g: 0.63385814, b: 0.9716981, a: 1}
   m_Intensity: 0.31
   m_LightVolumeIntensity: 1
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 100
+  m_PointLightOuterRadius: 58.6
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -253,7 +253,7 @@ Transform:
   m_GameObject: {fileID: 351666340}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.1, y: 3.9, z: 0}
+  m_LocalPosition: {x: -27.2, y: 8.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2858,6 +2858,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4737056176986670715, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ec17c40a7077c7e438b05cbebdc40eb0, type: 3}
+    - target: {fileID: -4737056176986670715, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2037118111092076102, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8
@@ -2898,65 +2906,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5317436191460776234, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-      propertyPath: moveSpeed
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5702371458570091944, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 5702371458570091944, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 6086900249073602075, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-      propertyPath: m_Size.x
-      value: 3.567401
-      objectReference: {fileID: 0}
-    - target: {fileID: 6086900249073602075, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-      propertyPath: m_Size.y
-      value: 3.9101424
-      objectReference: {fileID: 0}
-    - target: {fileID: 6086900249073602075, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.017395794
-      objectReference: {fileID: 0}
-    - target: {fileID: 6086900249073602075, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.0010037422
-      objectReference: {fileID: 0}
-    - target: {fileID: 6086900249073602075, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 3.1000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6086900249073602075, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 3.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 6086900249073602075, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 3.1000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6086900249073602075, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 6446767826364087189, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-      propertyPath: m_Size.x
-      value: 3.1000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6446767826364087189, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-      propertyPath: m_Size.y
-      value: 3.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 6446767826364087189, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -177346317, guid: 08f9038da45024589b5e271f7a73cf64, type: 3}
-    - target: {fileID: 6446767826364087189, guid: 276ae01224f3f436f93aea0a8d65ff47, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
