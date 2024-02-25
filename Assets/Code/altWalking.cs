@@ -13,6 +13,7 @@ public class altWalking : MonoBehaviour
     public GameObject HP_2;
     public GameObject HP_1;
     public GameObject HP_0;
+    public SpriteRenderer sprite;
 
     bool isInvincible = false;
     
@@ -51,9 +52,12 @@ public class altWalking : MonoBehaviour
         if (other.gameObject.tag == "Enemy" && !isInvincible)
         {
             playerHealth -= 1;
-            isInvincible = true;
+            
             StartCoroutine(InvincibilityTimer());
+            other.gameObject.GetComponent<AudioSource>().Play();
+            StartCoroutine(FlashRed());
 
+            isInvincible = true;
 
             if (playerHealth == 2)
             {
@@ -76,16 +80,21 @@ public class altWalking : MonoBehaviour
                 HP_1.gameObject.SetActive(false);
                 HP_0.gameObject.SetActive(true);
             }
+        }else{
+            isInvincible = false;
         }
-        isInvincible = false;
-        Debug.Log("off");
-        return;
+        
     }
 
     IEnumerator InvincibilityTimer()
     {
-        Debug.Log("on");
         yield return new WaitForSeconds(1f);
         
+    }
+
+    public IEnumerator FlashRed() {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        sprite.color = Color.white;
     }
 }

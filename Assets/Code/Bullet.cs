@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.layer == 0) {
+        if (other.gameObject.layer == 0 || other.gameObject.layer == 3) {
             Destroy(gameObject);
         }
     }
