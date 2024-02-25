@@ -33,7 +33,7 @@ public class walking : MonoBehaviour
         
         moveInput.Normalize();
 
-        playerRigidBody.velocity = moveInput * 10;
+        playerRigidBody.velocity = moveInput * 4;
         
     }
 }
