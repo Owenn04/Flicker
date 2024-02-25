@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 460514763}
   - component: {fileID: 460514762}
   - component: {fileID: 460514761}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Top1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1389,7 +1389,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2840,7 +2840,7 @@ GameObject:
   - component: {fileID: 1566828219}
   - component: {fileID: 1566828221}
   - component: {fileID: 1566828220}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22401,6 +22401,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alt Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2257026117941292276, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163616966884677907, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
+      propertyPath: m_ShadowIntensity
+      value: 0.152
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163616966884677907, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163616966884677907, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
+      propertyPath: m_ShadowIntensityEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986752154570852616, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
+      propertyPath: m_Size.x
+      value: 4.0539036
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986752154570852616, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
+      propertyPath: m_Size.y
+      value: 2.2617502
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986752154570852616, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.011739016
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510754871667109742, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594230652314186287, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5580555357661862023, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5580555357661862023, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 7352832548586182861, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
       propertyPath: ammoText
       value: 
@@ -22413,6 +22457,10 @@ PrefabInstance:
       propertyPath: UVflashlight_UI
       value: 
       objectReference: {fileID: 1551827189}
+    - target: {fileID: 7688388774311884712, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 9121288698008823085, guid: 8aeea56249e275041974b6cf8e1d1438, type: 3}
       propertyPath: cam
       value: 
@@ -22669,6 +22717,10 @@ PrefabInstance:
     - target: {fileID: 2861208098245854224, guid: 82d6bcd50dc2b204b8962f1fcd27eed8, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 2861208098245854224, guid: 82d6bcd50dc2b204b8962f1fcd27eed8, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7432705647484142465, guid: 82d6bcd50dc2b204b8962f1fcd27eed8, type: 3}
       propertyPath: m_LocalPosition.x

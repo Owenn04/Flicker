@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class Shooting : MonoBehaviour
@@ -16,6 +17,9 @@ public class Shooting : MonoBehaviour
     public float force = 20f;
     public int ammoCount = 13;
     public Text ammoText;
+    RaycastHit2D lightShine;
+    public float flashlightLength = 6; 
+    int flashlightMask;
 
     // Update is called once per frame
 
@@ -24,10 +28,20 @@ public class Shooting : MonoBehaviour
         UVflashlight.gameObject.SetActive(false);
         flashlight_UI.gameObject.SetActive(true);
         UVflashlight_UI.gameObject.SetActive(false);
+        flashlightMask = LayerMask.GetMask("Terrain");
     }
 
     void Update()
-    {
+    {           
+
+        lightShine = Physics2D.Raycast(transform.position, transform.right, 6f, flashlightMask);
+        if (lightShine.collider != null) {
+            flashlightLength = (float)(lightShine.distance + 0.5);
+        } else {
+            flashlightLength = 6;
+        }
+        flashlight.gameObject.GetComponent<Light2D>().pointLightOuterRadius = flashlightLength;
+
 
         if (Input.GetButtonDown("Fire1")) {   
             if (ammoCount > 0) {
