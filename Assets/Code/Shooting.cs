@@ -40,7 +40,11 @@ public class Shooting : MonoBehaviour
         } else {
             flashlightLength = 6;
         }
-        flashlight.gameObject.GetComponent<Light2D>().pointLightOuterRadius = flashlightLength;
+        if (flashlight.gameObject.activeSelf == true) {
+            flashlight.gameObject.GetComponent<Light2D>().pointLightOuterRadius = flashlightLength;
+        } else {
+            UVflashlight.gameObject.GetComponent<Light2D>().pointLightOuterRadius = flashlightLength;
+        }
 
 
         if (Input.GetButtonDown("Fire1")) {   
