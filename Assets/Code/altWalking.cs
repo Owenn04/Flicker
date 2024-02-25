@@ -14,15 +14,19 @@ public class altWalking : MonoBehaviour
     public GameObject HP_1;
     public GameObject HP_0;
 
-    Vector2 mousePos;
-    // Update is called once per frame
+    bool isInvincible = false;
+    
 
-    void Start() {
+    Vector2 mousePos;
+
+    void Start()
+    {
         HP_2.gameObject.SetActive(false);
         HP_3.gameObject.SetActive(true);
         HP_1.gameObject.SetActive(false);
         HP_0.gameObject.SetActive(false);
     }
+
     void Update()
     {
         moveInput.x = Input.GetAxisRaw("Horizontal");
@@ -32,35 +36,56 @@ public class altWalking : MonoBehaviour
 
         moveInput.Normalize();
 
-        playerRigidBody.velocity = moveInput * 10;  
+        playerRigidBody.velocity = moveInput * 10;
 
         Vector2 lookDir = mousePos - playerRigidBody.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         playerRigidBody.rotation = angle;
-        
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.tag == "Enemy") {
-            playerHealth -= 1;
+    private void OnCollisionEnter2D(Collision2D other)
+    {
 
-            if (playerHealth == 2) {
+        
+
+        if (other.gameObject.tag == "Enemy" && !isInvincible)
+        {
+            playerHealth -= 1;
+            isInvincible = true;
+            StartCoroutine(InvincibilityTimer());
+
+
+            if (playerHealth == 2)
+            {
                 HP_2.gameObject.SetActive(true);
                 HP_3.gameObject.SetActive(false);
                 HP_1.gameObject.SetActive(false);
                 HP_0.gameObject.SetActive(false);
-            } else if (playerHealth == 1) {
+            }
+            else if (playerHealth == 1)
+            {
                 HP_2.gameObject.SetActive(false);
                 HP_3.gameObject.SetActive(false);
                 HP_1.gameObject.SetActive(true);
                 HP_0.gameObject.SetActive(false);
-            } else if (playerHealth == 0) {
+            }
+            else if (playerHealth == 0)
+            {
                 HP_2.gameObject.SetActive(false);
                 HP_3.gameObject.SetActive(false);
                 HP_1.gameObject.SetActive(false);
                 HP_0.gameObject.SetActive(true);
             }
-
         }
+        isInvincible = false;
+        Debug.Log("off");
+        return;
+    }
+
+    IEnumerator InvincibilityTimer()
+    {
+        Debug.Log("on");
+        yield return new WaitForSeconds(1f);
+        
     }
 }
