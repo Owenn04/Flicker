@@ -25,6 +25,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
 
     void Start() {
+        // Sets up UI and active flashlight
         flashlight.gameObject.SetActive(true);
         UVflashlight.gameObject.SetActive(false);
         flashlight_UI.gameObject.SetActive(true);
@@ -34,7 +35,7 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {           
-
+        // Detects if light is hitting an object and shortens ray accordingly 
         lightShine = Physics2D.Raycast(transform.position, transform.right, 6f, flashlightMask);
         if (lightShine.collider != null) {
             flashlightLength = (float)(lightShine.distance + 0.5);
@@ -72,6 +73,7 @@ public class Shooting : MonoBehaviour
         
     }
 
+    // Script for player shooting
     void Shoot() {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D bulletBody = bullet.GetComponent<Rigidbody2D>();

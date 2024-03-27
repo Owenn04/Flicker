@@ -10,11 +10,11 @@ public class light_scripts : MonoBehaviour
     int flashlightMask;
     RaycastHit2D lightShine;
     public GameObject UVflashlight;
-    void Start()
-    {
-    graveMoved = false;
-    extraGun.SetActive(false);
-    flashlightMask = LayerMask.GetMask("Terrain");
+    void Start() {
+        flashlightMask = LayerMask.GetMask("Terrain");
+        //Setting up the moving grave
+        graveMoved = false;
+        extraGun.SetActive(false);
     }
 
     // Update is called once per frame
@@ -22,6 +22,7 @@ public class light_scripts : MonoBehaviour
     {
         lightShine = Physics2D.Raycast(transform.position, transform.right, 6f, flashlightMask);
         if (lightShine.collider != null) {
+            // If statement moves grave when UV light hits the grave
             if (lightShine.collider.gameObject.tag == "Moving Grave" && UVflashlight.gameObject.activeSelf && !graveMoved) {
                 StartCoroutine(slowMove(lightShine.collider.gameObject));
                 graveMoved = true;
@@ -29,6 +30,7 @@ public class light_scripts : MonoBehaviour
         }
     }
 
+    //Script for moving grave
     public IEnumerator slowMove(GameObject moved) {
         extraGun.SetActive(true);
         for (int i = 0; i < 40; i++) {

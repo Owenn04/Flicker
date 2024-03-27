@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// This script handles player movement and collision as well as the players stats (hp, ammo count, etc.)
 public class altWalking : MonoBehaviour
 {
 
