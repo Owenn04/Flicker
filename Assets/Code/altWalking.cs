@@ -55,6 +55,9 @@ public class altWalking : MonoBehaviour
             shootingScript.ammoCount += 13;
             shootingScript.ammoText.text = shootingScript.ammoCount.ToString();
             other.gameObject.SetActive(false);
+        } else if (other.gameObject.tag == "health pickup") {
+            playerHealth = 3;
+            other.gameObject.SetActive(false);
         }
 
         if (other.gameObject.tag == "Enemy" && !isInvincible) {
@@ -65,27 +68,32 @@ public class altWalking : MonoBehaviour
             StartCoroutine(FlashRed());
 
                 isInvincible = true;
+        } else{
+            isInvincible = false;
+        }
 
-            if (playerHealth == 2) {
-                HP_2.gameObject.SetActive(true);
+            if (playerHealth == 3) {
+                HP_3.gameObject.SetActive(true);
+                HP_2.gameObject.SetActive(false);
+                HP_1.gameObject.SetActive(false);
+                HP_0.gameObject.SetActive(false);
+            } else if (playerHealth == 2) {
                 HP_3.gameObject.SetActive(false);
+                HP_2.gameObject.SetActive(true);
                 HP_1.gameObject.SetActive(false);
                 HP_0.gameObject.SetActive(false);
             } else if (playerHealth == 1) {
-                HP_2.gameObject.SetActive(false);
                 HP_3.gameObject.SetActive(false);
+                HP_2.gameObject.SetActive(false);
                 HP_1.gameObject.SetActive(true);
                 HP_0.gameObject.SetActive(false);
             } else if (playerHealth == 0) {
-                HP_2.gameObject.SetActive(false);
                 HP_3.gameObject.SetActive(false);
+                HP_2.gameObject.SetActive(false);
                 HP_1.gameObject.SetActive(false);
                 HP_0.gameObject.SetActive(true);
                 gameOver();
             }
-        } else{
-            isInvincible = false;
-        }
         
     }
 
