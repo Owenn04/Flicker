@@ -13,14 +13,19 @@ public class light_scripts : MonoBehaviour
     int flashlightMask;
     RaycastHit2D lightShine;
     public GameObject UVflashlight;
-    public GameObject receptacleLight;
+    Light2D[] shinedLights;
     void Start() {
         flashlightMask = LayerMask.GetMask("Terrain");
         //Setting up the moving grave
         graveMoved = false;
         extraGun.SetActive(false);
+        GameObject receptacle = GameObject.FindWithTag("Receptacle");
         //Setting up light refracting graves
-        receptacleLight.GetComponent<Light2D>().enabled = false;
+        shinedLights = receptacle.GetComponentsInChildren<Light2D>();
+        for (int i = 0; i < shinedLights.Length; i++){
+                    shinedLights[i].enabled = false;
+                    Debug.Log("added light");
+        }
     }
 
     // Update is called once per frame
@@ -35,10 +40,12 @@ public class light_scripts : MonoBehaviour
             }
             // If statement moves grave when UV light hits the refracting grave
             if (lightShine.collider.gameObject.tag == "Receptacle" && UVflashlight.gameObject.activeSelf && !otherMoved) {
-                receptacleLight.GetComponent<Light2D>().enabled = true;
+                for (int i = 0; i < shinedLights.Length; i++){
+                    shinedLights[i].enabled = true;
+                    Debug.Log("turned on light");
+                }
+                
             }
-        } else {
-            receptacleLight.GetComponent<Light2D>().enabled = false;
         }
     }
 
