@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ae3d09fbe9ac90a4bb627c87bfa65356
+guid: 68f361a8780cfb746986dd16716b6cdf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grave_0
+      name: golden grave_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 26
-        width: 227
-        height: 509
+        x: 52
+        y: 32
+        width: 349
+        height: 339
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba541a89a32d95c41ab36ee1240a60b5
-      internalID: -1139986126
+      spriteID: 9bfae29d648c2824bbe309681cf29605
+      internalID: -2151283
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      grave_0: -1139986126
+      golden grave_0: -2151283
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
