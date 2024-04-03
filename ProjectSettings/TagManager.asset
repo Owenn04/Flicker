@@ -12,6 +12,9 @@ TagManager:
   - Shifted
   - Gilded
   - health pickup
+  - Disappearing
+  - moon gem
+  - post grave
   layers:
   - Default
   - TransparentFX

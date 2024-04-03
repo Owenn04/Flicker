@@ -11,6 +11,8 @@ public class altWalking : MonoBehaviour
     private Vector2 moveInput;
     public Camera cam;
     public int playerHealth = 3;
+    public bool hasMoonGem = false;
+    public bool hasExitGem = false;
     public GameObject HP_3;
     public GameObject HP_2;
     public GameObject HP_1;
@@ -58,6 +60,10 @@ public class altWalking : MonoBehaviour
         } else if (other.gameObject.tag == "health pickup") {
             playerHealth = 3;
             other.gameObject.SetActive(false);
+        } else if (other.gameObject.tag == "moon gem") {
+            hasMoonGem = true;
+            other.gameObject.SetActive(false);
+            Debug.Log("has gem");
         }
 
         if (other.gameObject.tag == "Enemy" && !isInvincible) {
