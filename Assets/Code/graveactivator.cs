@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using TMPro; 
+
 public class graveactivator : MonoBehaviour
 {
 
@@ -9,6 +11,8 @@ public class graveactivator : MonoBehaviour
     public GameObject gravecanvas;
     public GameObject gravecanvaspost;
     public altWalking walkingScript;
+    public TextMeshProUGUI gemText1;
+
     void Start() {
         postgrave = GameObject.FindWithTag("post grave");
         postgrave.gameObject.SetActive(false);
@@ -40,5 +44,18 @@ public class graveactivator : MonoBehaviour
     public void hidePost() {
         gravecanvaspost.SetActive(false);
         Debug.Log("turned off post");
+        UpdateUI();
+        Invoke("ClearGemText", 2f);
+    }
+    private void UpdateUI(){
+        if(gemText1 != null){
+            gemText1.text = "Gems Collected: " + 2 + "/" + 2;
+        }
+    }
+    private void ClearGemText(){
+        if (gemText1 != null)
+        {
+            gemText1.text = "";
+        }
     }
 }

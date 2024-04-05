@@ -4,6 +4,7 @@ using TMPro;
 public class GemPickup : MonoBehaviour
 {
     public TextMeshProUGUI gemText;
+
     public altWalking altWalking;
 
     private int totalGems = 2; // Total number of gems in the level
@@ -26,11 +27,8 @@ public class GemPickup : MonoBehaviour
     private void UpdateUI()
     {
 
-        if (gemText != null && altWalking.hasExitGem){
-            gemsPickedUp++;
-            gemText.text = "Gems Collected: " + gemsPickedUp + "/" + totalGems;
-            
-        }else if(gemText != null){
+  
+        if(gemText != null){
             gemText.text = "Gems Collected: " + gemsPickedUp + "/" + totalGems;
         }
     }
