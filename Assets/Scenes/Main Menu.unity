@@ -712,7 +712,9 @@ MonoBehaviour:
 
     Use Left Click to shoot your gun
 
-'
+
+    Press
+    Escape to pause the game'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47a9ced47b675da429fce3e3193cc81a, type: 2}
   m_sharedMaterial: {fileID: -3161956966622865168, guid: 47a9ced47b675da429fce3e3193cc81a, type: 2}
