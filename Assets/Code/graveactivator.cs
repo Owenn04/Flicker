@@ -22,8 +22,8 @@ public class graveactivator : MonoBehaviour
             walkingScript.hasExitGem = true;
             Debug.Log("registered player collision");
             showPre();
-            Invoke("hidePre", 2);
-            Invoke("hidePost", 4);
+            Invoke("hidePre", 1);
+            Invoke("hidePost", 2);
             postgrave.gameObject.SetActive(true);
             Debug.Log("Deactivated");
             gameObject.SetActive(false);
