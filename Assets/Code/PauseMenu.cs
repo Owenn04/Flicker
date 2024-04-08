@@ -4,7 +4,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
 
-    private bool isPaused = false;
+    public bool isPaused = false;
 
     void Update()
     {
@@ -29,5 +29,6 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f; // Stop time
         isPaused = true;
+        
     }
 }

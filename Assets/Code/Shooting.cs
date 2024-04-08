@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
+
+
 public class Shooting : MonoBehaviour
 {
     public Transform firePoint;
@@ -21,6 +23,8 @@ public class Shooting : MonoBehaviour
     public float flashlightLength = 6; 
     int flashlightMask;
     public GameObject gun;
+
+    public PauseMenu pauseMenu;
 
     // Update is called once per frame
 
@@ -48,13 +52,17 @@ public class Shooting : MonoBehaviour
             UVflashlight.gameObject.GetComponent<Light2D>().pointLightOuterRadius = flashlightLength;
         }
 
-
-        if (Input.GetButtonDown("Fire1")) {   
-            if (ammoCount > 0) {
-                Shoot();
-                gun.gameObject.GetComponent<AudioSource>().Play();
-            }
+        // Check if the game is paused before allowing shooting
+        if (!pauseMenu.isPaused){
+            if (Input.GetButtonDown("Fire1")) {   
+                if (ammoCount > 0) {
+                    Shoot();
+                    gun.gameObject.GetComponent<AudioSource>().Play();
+                }
+            }   
         }
+        
+        
         if (Input.GetKeyDown(KeyCode.F)) {
             if (!flashOn) {
                 flashlight.gameObject.SetActive(true);
