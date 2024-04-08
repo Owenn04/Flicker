@@ -30,14 +30,4 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f; // Stop time
         isPaused = true;
     }
-
-    public void Restart()
-    {
-        // Add logic for restarting the game
-    }
-
-    public void Quit()
-    {
-        // Add logic for quitting the game
-    }
 }
