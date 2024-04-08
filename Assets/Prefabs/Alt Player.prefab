@@ -12,8 +12,11 @@ GameObject:
   - component: {fileID: 3280507199391643234}
   - component: {fileID: 3986752154570852616}
   - component: {fileID: 2646415182609267909}
+  - component: {fileID: 1639293727306009450}
   - component: {fileID: 9121288698008823085}
   - component: {fileID: 7352832548586182861}
+  - component: {fileID: 7198884483368523401}
+  - component: {fileID: 3679983422269793023}
   m_Layer: 6
   m_Name: Alt Player
   m_TagString: Player
@@ -163,6 +166,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1639293727306009450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2257026117941292276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dcfdaa4069de8241aeb67c0b02a945f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 0}
+  isPaused: 0
 --- !u!114 &9121288698008823085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,12 +195,15 @@ MonoBehaviour:
   playerRigidBody: {fileID: 2646415182609267909}
   cam: {fileID: 0}
   playerHealth: 3
+  hasMoonGem: 0
+  hasExitGem: 0
   HP_3: {fileID: 0}
   HP_2: {fileID: 0}
   HP_1: {fileID: 0}
   HP_0: {fileID: 0}
   sprite: {fileID: 3280507199391643234}
   gameOverMenu: {fileID: 0}
+  shootingScript: {fileID: 7352832548586182861}
 --- !u!114 &7352832548586182861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,6 +227,74 @@ MonoBehaviour:
   ammoText: {fileID: 0}
   flashlightLength: 6
   gun: {fileID: 4594230652314186287}
+  pauseMenu: {fileID: 1639293727306009450}
+--- !u!114 &7198884483368523401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2257026117941292276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f7e98414188df4c8e35470c2ac23a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  extraGun: {fileID: 0}
+  grave1Moved: 0
+  grave2Moved: 0
+  otherMoved: 0
+  UVflashlight: {fileID: 7688388774311884712}
+--- !u!114 &3679983422269793023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2257026117941292276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_LightVolumeIntensity: 1
+  m_LightVolumeIntensityEnabled: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensity: 0.75
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1.45
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &4510754871667109742
 GameObject:
   m_ObjectHideFlags: 0
