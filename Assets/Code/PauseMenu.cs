@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -31,4 +32,9 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
         
     }
+    // bool IsSceneAllowed(){
+    //     string currentScene = SceneManager.GetActiveScene().name;
+    //     Debug.Log("scene" + currentScene);
+    //     return currentScene != "MainScene";
+    // }
 }

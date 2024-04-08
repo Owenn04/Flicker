@@ -53,14 +53,14 @@ public class Shooting : MonoBehaviour
         }
 
         // Check if the game is paused before allowing shooting
-        if (!pauseMenu.isPaused){
+        // if (!pauseMenu.isPaused){
             if (Input.GetButtonDown("Fire1")) {   
                 if (ammoCount > 0) {
                     Shoot();
                     gun.gameObject.GetComponent<AudioSource>().Play();
                 }
             }   
-        }
+        
         
         
         if (Input.GetKeyDown(KeyCode.F)) {
